@@ -18,13 +18,13 @@ body {
 
 h1 {
     color:hsl(240, 100%, 5%);
-    font-size: clamp(1rem, 2.5vw, 4rem);
+    font-size: clamp(2rem, 2.5vw, 4rem);
     font-weight: 800;
     margin: 0;
 }
 
 h2 {
-    font-size: clamp(1rem, 2.5vw, 3rem);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     color:hsl(35, 77%, 62%);
     margin: 0;
 }
@@ -37,10 +37,11 @@ h3 {
 
 h3:hover {
     color:hsl(35, 77%, 62%);
+    transition: 1s;
 }
 
 p {
-    font-size: clamp(0.9rem, 1vw, 2rem);
+    font-size: clamp(0.8rem, 1vw, 2rem);
     color: hsl(233, 8%, 79%);
     line-height: 1.8;
     text-align: justify;
@@ -54,15 +55,11 @@ a {
 header {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 40%;
     padding-top: 5%;
     width: 100%;
     align-items: center;
     margin-bottom: 3%;
-}
-
-nav {
-    padding-left: 30%;
 }
 
 ul {
@@ -70,15 +67,12 @@ ul {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-size: clamp(1rem, 1vw, 2rem);
+    font-size: clamp(0.8rem, 1.1vw, 2rem);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-li {
-    padding-left: 5%;
-}
 
 ul a {
     text-decoration: none;
@@ -139,17 +133,23 @@ ul a:hover {
 
 .description-container button {
     border: none;
-    background-color:hsl(240, 100%, 5%);
-    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(240, 100%, 5%);
     width: 56%;
     padding: 0;
     padding-top:4.5%;
     padding-bottom:4.5%;
     font-family: "Inter", sans-serif;
-    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(0.6rem, 1vw, 1rem);
     letter-spacing: 0.3rem;
-    font-weight: 400;
+    font-weight: 800;
     cursor: pointer;
+}
+
+.description-container button:hover {
+    background-color:hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    transition: 1s;
 }
 
 .aside-section {
@@ -180,7 +180,7 @@ ul a:hover {
     }
 
     body.darken {
-        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     header {
@@ -226,4 +226,25 @@ ul a:hover {
         padding-right: 10%;
         margin-left: auto;
     }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside-section {
+        display: grid;
+        background-color: hsl(240, 100%, 5%);
+        color: white;
+        padding: 9% 7% 7%;
+        padding-bottom: 0;
+        margin: 0;
+        margin-top: 10%;
+    }
+
 }
