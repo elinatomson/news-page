@@ -37,7 +37,7 @@ h3 {
 
 h3:hover {
     color:hsl(35, 77%, 62%);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 p {
@@ -50,6 +50,15 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.placeholder-image {
+    color: hsl(233, 8%, 79%);
+    font-size: clamp(1rem, 1.4vw, 2rem);
+    border: 1px solid hsl(233, 8%, 79%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -81,7 +90,7 @@ ul a {
 
 ul a:hover {
     color: hsl(5, 85%, 63%);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .menu {
@@ -129,6 +138,7 @@ ul a:hover {
 
 .description-container a {
     margin-top: auto;
+    margin-bottom: 1%;
 }
 
 .description-container button {
@@ -149,7 +159,7 @@ ul a:hover {
 .description-container button:hover {
     background-color:hsl(240, 100%, 5%);
     color: hsl(36, 100%, 99%);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .aside-section {
@@ -169,6 +179,50 @@ ul a:hover {
     padding-bottom: 5%;
     border-bottom: 0.5px solid hsl(233, 8%, 79%);
 }
+
+.below-section {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 4%;
+    width: 100%;
+}
+
+.below-section .article-container {
+    display: grid;
+    grid-template-columns: 30% auto;
+    height: 100%;
+}
+
+.below-section .article-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.below-section .description-container {
+    margin-left: 10%;
+}
+
+.below-section h3 {
+    color: hsl(240, 100%, 5%);
+}
+
+.below-section h3:hover {
+    color: hsl(5, 85%, 63%);
+    transition: 0.5s;
+}
+
+.below-section p {
+    color: hsl(236, 13%, 42%)
+}
+
+.below-section h1 {
+    color: hsl(5, 85%, 63%);
+    font-weight: 700;
+    padding-bottom: 4%;
+}
+
 
 @media (max-width: 768px) {
     .body {
@@ -244,6 +298,12 @@ ul a:hover {
         padding: 9% 7% 7%;
         padding-bottom: 0;
         margin: 0;
+        margin-top: 10%;
+    }
+
+    .below-section {
+        display: flex;
+        flex-direction: column;
         margin-top: 10%;
     }
 
