@@ -21,10 +21,11 @@ h1 {
     font-size: clamp(2rem, 2.5vw, 4rem);
     font-weight: 800;
     margin: 0;
+    overflow: hidden;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-size: clamp(1rem, 2.5vw, 3rem);
     color:hsl(35, 77%, 62%);
     margin: 0;
 }
@@ -82,7 +83,6 @@ ul {
     justify-content: space-between;
 }
 
-
 ul a {
     text-decoration: none;
     color: hsl(236, 13%, 42%)
@@ -97,6 +97,36 @@ ul a:hover {
     display: none;
 }
 
+.dropdown-button {
+    border: none;
+    background-color: hsl(36, 100%, 99%);
+    color: hsl(236, 13%, 42%);
+    padding: 0;
+}
+
+.dropdown-button:hover {
+    color: hsl(5, 85%, 63%);
+    transition: 0.5s;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    background-color: hsl(36, 100%, 99%);
+}
+
+.dropdown-item {
+    color: hsl(236, 13%, 42%);
+    font-size: clamp(0.8rem, 1.1vw, 2rem);
+    text-align: center;
+}
+
+.dropdown-item:hover{
+    background-color: hsl(36, 100%, 99%);
+    color: hsl(5, 85%, 63%);
+    transition: 0.5s;
+}
+
 .close-menu {
     display: none;
 }
@@ -107,6 +137,7 @@ ul a:hover {
     gap: 20px;
     color: white;
     padding: 0;
+    margin-bottom: 4%;
 }
 
 .article-image {
@@ -170,7 +201,7 @@ ul a:hover {
     margin-left: 3%;
     padding: 9% 7% 7%;
     padding-bottom: 0;
-    margin-bottom: 0;
+    margin-bottom: 4%;
 }
 
 .aside-article {
@@ -180,49 +211,78 @@ ul a:hover {
     border-bottom: 0.5px solid hsl(233, 8%, 79%);
 }
 
-.below-section {
+.popular-section {
     grid-column: 1 / -1;
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 4%;
     width: 100%;
+    margin-bottom: 4%;
 }
 
-.below-section .article-container {
+.popular-section .article-container {
     display: grid;
     grid-template-columns: 30% auto;
     height: 100%;
 }
 
-.below-section .article-image {
+.popular-section .article-image {
     height: 100%;
     object-fit: cover;
 }
 
-.below-section .description-container {
+.popular-section .description-container {
     margin-left: 10%;
 }
 
-.below-section h3 {
+.popular-section h3 {
     color: hsl(240, 100%, 5%);
 }
 
-.below-section h3:hover {
+.popular-section h3:hover {
     color: hsl(5, 85%, 63%);
     transition: 0.5s;
 }
 
-.below-section p {
+.popular-section p {
     color: hsl(236, 13%, 42%)
 }
 
-.below-section h1 {
+.popular-section h1 {
     color: hsl(5, 85%, 63%);
     font-weight: 700;
     padding-bottom: 4%;
 }
 
+.new-section {
+    grid-column: 1 / -1;
+    background-color: hsl(233, 8%, 79%);
+    margin-bottom: 4%;
+}
+
+.new-section h2 {
+    margin: 2%;
+}
+
+.new-section h3 {
+    color: hsl(240, 100%, 5%);
+}
+
+.new-article {
+    height: 20vw;
+    margin: 0;
+    margin-bottom: 4%;
+    text-align: center;
+    padding: 4%;
+}
+
+.new-article img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    margin: 0;
+    margin-bottom: 4%;
+}
 
 @media (max-width: 768px) {
     .body {
@@ -262,6 +322,7 @@ ul a:hover {
         flex-direction: column;
         margin-top: 70px;
         padding: 15px;
+        width: auto;
     }
 
     header li {
@@ -272,6 +333,25 @@ ul a:hover {
     .menu {
         display: flex;
         margin-left: auto;
+    }
+
+    .dropdown-menu {
+        transform: translate3d(-10px, 28.5px, 0px) !important;
+    }
+
+    .dropdown-menu li{
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown-item {
+        font-size: 1.1rem;
+        text-align: left;
+        padding-left: 7%;
+    }
+
+    .dropdown-button {
+        padding: 0;
     }
 
     .close-menu {
@@ -299,12 +379,24 @@ ul a:hover {
         padding-bottom: 0;
         margin: 0;
         margin-top: 10%;
+        margin-bottom: 10%;
     }
 
-    .below-section {
+    .popular-section {
         display: flex;
         flex-direction: column;
-        margin-top: 10%;
+        margin-bottom: 10%;
     }
 
+    .new-section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10%;
+        background-color: hsl(233, 8%, 79%);
+    }
+
+    .new-article {
+        height: 40vw;
+        justify-content: center;
+    }
 }

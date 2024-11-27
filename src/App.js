@@ -1,10 +1,12 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/sections/Header';
-import Footer from './components/sections/Footer'
-import Main from './components/sections/Main'
-import Aside from './components/sections/Aside'
-import Below from './components/sections/Below'
+import Footer from './components/sections/Footer';
+import Main from './components/sections/Main';
+import Aside from './components/sections/Aside';
+import New from './components/sections/New';
+import Popular from './components/sections/Popular';
+import Trending from './components/sections/Trending';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
       <Header/>
       <Main/>
       <Aside/>
-      <Below/>
+      <Popular/>
+      <New/>
+      <Trending/>
       <Footer/>
     </Router>
   );

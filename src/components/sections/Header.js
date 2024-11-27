@@ -29,10 +29,19 @@ function Header() {
         <img src={menu_close}  className='close-menu' alt="Menu" onClick={toggleMenu} />
         <ul aria-label="Main navigation">
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/new">New</Link></li>
-          <li><Link to="/popular">Popular</Link></li>
-          <li><Link to="/trending">Trending</Link></li>
-          <li><Link to="/categories">Categories</Link></li>
+          <li><a href="#popular">Popular</a></li>
+          <li><a href="#new">New</a></li>
+          <li><a href="#trending">Trending</a></li>
+          <li className="dropdown-center">
+            <button className="dropdown-button dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categories
+            </button>
+            <ul className="dropdown-menu">
+              <li><button className="dropdown-item" type="button">Business</button></li>
+              <li><button className="dropdown-item" type="button">Technology</button></li>
+              <li><button className="dropdown-item" type="button">Sports</button></li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </header>

@@ -38,7 +38,7 @@ function Main() {
                         <section className='description-container'>
                             <p>{article.description}</p>
                             <a href={article.url} target="_blank" rel="noopener noreferrer" className="article-link">
-                                <button>READ MORE</button>
+                                <button className='article-button'>READ MORE</button>
                             </a>
                         </section>
                     </section>
